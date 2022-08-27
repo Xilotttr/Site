@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<div class="content">
+    {% if request.user.is_authenticated %}
+    <ul>
+        <li><a href="{% url 'delete_account' %}">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="item">Delete account</span>
+        </a></li>
+        <li><a href="{% url 'change_password' %}">
+            <span class="icon"><i class="fa-solid fa-key"></i></span>
+            <span class="item">Change password</span>
+        </a></li>
+        <li><a href="{% url 'logout' %}">
+            <span class="icon"><i class="fa-solid fa-door-open"></i></i></span>
+            <span class="item">Log out</span>
+        </a></li>
+    </ul>
+    {% else %}
+     <h2>{{ title }}</h2>
+        <p>Please sign in or sign up to continue</p>
+        <a href="/accounts/login">Sign in</a> | <a href="/accounts/signup">Sign up</a>
+    {% endif %}
+</div>
+{% endblock %}

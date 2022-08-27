@@ -1,0 +1,210 @@
+*{
+    list-style:none;
+    text-decoration:none;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ body{
+    background: #2с2с2с;
+    height:100vh;
+}
+.wrapper .sidebar ul{
+    padding-left: 0;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #2c2c2c;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+}
+.wrapper .sidebar{
+    background: #181818;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section{
+    width: calc(100%-230px);
+    margin-left:230px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    background-color: #181818;
+    height: 50px;
+    display: flex;
+    align-items:center;
+    padding: 0 30px;
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #fff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #eb5959;
+}
+
+body.active .wrapper .sidebar{
+    left: -230px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0%;
+}
+
+.main{
+    width: calc(100%-230px);
+    margin-left:230px;
+    transition: all 0.5s ease;
+    background-color: #2c2c2c;
+    height: 100%;
+    color: #fff;
+    font-size: 20px;
+}
+
+.main form{
+    display: table-caption;
+}
+
+.main .helptext{
+    display: none;
+}
+.main .registration_form form .errorlist{
+    display: none;
+}
+.main .login_form span{
+    margin-top: 10px;
+}
+
+.main .login_form span a{
+    color: #fff;
+}
+
+.main .login_form span a:hover{
+    color: #eb5959;
+}
+
+.main .registration_form .redirect{
+    margin-top: 20px;
+}
+
+.main .registration_form .redirect a{
+    color: #fff;
+}
+
+.main .registration_form .redirect a:hover{
+    color: #eb5959;
+}
+
+.main .activation_done .message a{
+    color: #fff;
+}
+
+.main .activation_done .message a:hover{
+    color: #eb5959;
+}
+
+body.active .main{
+    margin-left: 0%;
+}
+
+.wrapper .sidebar ul li{
+    height: 50px;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    background: #2c2c2c;
+    border-right: 2px solid #181818;
+    color: #eb5959;
+    text-decoration: none;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #fff;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #eb5959;
+}
+
+.wrapper .sidebar ul li a:hover::before,
+.wrapper .sidebar ul li a.active::before{
+    display: block;
+}
+
+.main{
+    display: flex;
+    padding-left: 10px;
+}
+
+.main .content{
+    display: block;
+    padding-left: 10px;
+}
+
+.main .content a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.main .content a:hover{
+    color: #eb5959;
+}
+
+.main .content ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #2c2c2c;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.main .content ul{
+    padding-left: 0;
+}
+
+.main .content #back{
+    color: #000000;
+}
+
+.main .content #back:hover{
+    color: #000000;
+}
+
+.main .login_form a{
+    color: #fff;
+}
+
+.main .login_form a:hover{
+    color: #eb5959
+}
+
+.main .password_change form ul{
+    display: none;
+}
+
+.main .content img{
+    border-radius: 5%;
+}
+
+.main .registration_form button{
+    text-align: left;
+    width: 100px;
+}

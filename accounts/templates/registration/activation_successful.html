@@ -1,0 +1,8 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="activation_done">
+    <h1>Activation successful</h1>
+    <p class="message">Now you can <a href="{% url 'login' %}">sign in</a></p>
+</div>
+{% endblock %}

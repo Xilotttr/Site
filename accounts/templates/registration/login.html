@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="login_form">
+  <fieldset class="form_group">
+    <legend>Log In</legend>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-success" type="submit">Log In</button>
+    </form>
+
+    <div class="additional_links">
+      <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+      <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+    </div>
+  </fieldset>
+</div>
+{% endblock %}
